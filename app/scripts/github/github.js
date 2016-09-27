@@ -8,6 +8,7 @@
  * Controller of the jabacodeAngularApp
  */
 angular.module('jabacodeAngularApp')
+
   .controller('GithubCtrl', function ($scope, $http, $interval,
                                       $log, $anchorScroll) {
     $scope.username = 'augustojaba';
@@ -38,6 +39,7 @@ angular.module('jabacodeAngularApp')
     };
 
   })
+
   .controller('RepositoryCtrl', function ($scope, $http, $routeParams, $log) {
 
     var onReposComplete = function (response) {
@@ -59,7 +61,7 @@ angular.module('jabacodeAngularApp')
       restrict: "E",
       templateUrl: "scripts/github/repo-list.html",
       scope: {
-        repo: "@"
+        repo: "="
       }
     }
 
