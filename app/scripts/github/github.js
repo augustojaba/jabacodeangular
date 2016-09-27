@@ -52,7 +52,7 @@ angular.module('jabacodeAngularApp')
       $log.error(reason);
     }
 
-    $http.get('https://api.github.com/repos/augustojaba/' + $routeParams.id)
+    $http.get('https://api.github.com/repos/' + $routeParams.username + '/' + $routeParams.repo)
       .then(onReposComplete, onError);
 
   })
@@ -61,11 +61,10 @@ angular.module('jabacodeAngularApp')
     return {
       restrict: "E",
       scope: {
-        repos: "="
+        repos: "=",
+        username: "="
       },
-      templateUrl: "scripts/github/repo-list.html",
-      controller: function ($scope) {
-      }
+      templateUrl: "scripts/github/repo-list.html"
     }
 
   });

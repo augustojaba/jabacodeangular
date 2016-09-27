@@ -30,7 +30,7 @@ angular
         controller: 'GithubCtrl',
         controllerAs: 'github'
       })
-      .when('/github/repos/:id', {
+      .when('/github/repos/:username/:repo', {
         templateUrl: 'scripts/github/repos.html',
         controller: 'RepositoryCtrl',
         controllerAs: 'repository'
