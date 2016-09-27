@@ -1,7 +1,5 @@
 <p>This is a page to test the Github API.</p>
 
-<p>{{countdown}}</p>
-
 <form name="searchUser" ng-submit="search(username)">
   <label>Username: </label>
   <input type="search" required ng-model="username"/>
@@ -11,12 +9,6 @@
 <div id="userDetails">
   <h2>{{user.name}}</h2>
   <p><img ng-src="{{user.avatar_url}}" title="{{user.name}}" width="50px" height="50px"/></p>
-
-  <select ng-model="repoSortOrder">
-    <option value="+name">Name</option>
-    <option value="-stargazers_count">Stars</option>
-    <option value="+language">Language</option>
-  </select>
 </div>
 <br/>
 

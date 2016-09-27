@@ -63,7 +63,9 @@ angular.module('jabacodeAngularApp')
       scope: {
         repos: "="
       },
-      templateUrl: "scripts/github/repo-list.html"
+      templateUrl: "scripts/github/repo-list.html",
+      controller: function ($scope) {
+      }
     }
 
   });
