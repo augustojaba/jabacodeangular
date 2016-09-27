@@ -12,6 +12,7 @@ angular.module('jabacodeAngularApp')
   .controller('GithubCtrl', function ($scope, $http, $interval,
                                       $log, $anchorScroll) {
     $scope.username = 'augustojaba';
+    // $scope.repo = {name: 'teste', stargazers_count: 23, language: 'port' };
 
     $scope.search = function (username) {
 
@@ -59,10 +60,10 @@ angular.module('jabacodeAngularApp')
   .directive('repoList', function () {
     return {
       restrict: "E",
-      templateUrl: "scripts/github/repo-list.html",
       scope: {
-        repo: "="
-      }
+        repos: "="
+      },
+      templateUrl: "scripts/github/repo-list.html"
     }
 
   });

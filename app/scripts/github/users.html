@@ -4,13 +4,13 @@
 
 <form name="searchUser" ng-submit="search(username)">
   <label>Username: </label>
-  <input type="search" required ng-model="username" />
-  <input type="submit" value="Search" />
+  <input type="search" required ng-model="username"/>
+  <input type="submit" value="Search"/>
 </form>
 
 <div id="userDetails">
   <h2>{{user.name}}</h2>
-  <p><img ng-src="{{user.avatar_url}}" title="{{user.name}}" width="50px" height="50px" /></p>
+  <p><img ng-src="{{user.avatar_url}}" title="{{user.name}}" width="50px" height="50px"/></p>
 
   <select ng-model="repoSortOrder">
     <option value="+name">Name</option>
@@ -18,21 +18,7 @@
     <option value="+language">Language</option>
   </select>
 </div>
-<br />
+<br/>
 
-<div>
-  <table>
-    <thead>
-    <tr>
-      <th>Name</th>
-      <th>Stars</th>
-      <th>Language</th>
-    </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
-        <repo-list repo="repo.name"></repo-list>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<repo-list repos="repos"></repo-list>
+

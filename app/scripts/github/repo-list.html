@@ -1,4 +1,21 @@
-<td>{{repo.name}}</td>
-<td>{{repo.stargazers_count | number}}</td>
-<td>{{repo.language}}</td>
-<td><a ng-href="#/github/repos/{{repo.name}}">Details</a></td>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Stars</th>
+        <th>Language</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
+        <td>{{repo.name}}</td>
+        <td>{{repo.stargazers_count | number}}</td>
+        <td>{{repo.language}}</td>
+        <td><a ng-href="#/github/repos/{{repo.name}}">Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
